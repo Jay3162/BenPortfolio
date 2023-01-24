@@ -1,0 +1,83 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(26, 27, 29);
+    color: #ccc;
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 700;
+    /* transition: opacity 2s ease-in; */
+    transition: fadein 2s ease-in;    
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -webkit-animation: slidein 2s;
+    font-size: 1.3vw;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slidein {
+    from { transform: translateY(40%); }
+    to   { transform: translateY(0%); }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes slidein {
+    from { transform: translateY(20%);}
+    to   { transform: translateY(0%);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.nav-el {
+    transition: slidein 2s ease-in;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-el:hover {
+    cursor: pointer;
+    color: white;
+    transition: slideup 1s ease-in;
+}
+
+@keyframes slideup {
+    from {transform: translateY(0%)}
+    to   {transform: translateY(20%)}
+}
