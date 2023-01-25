@@ -1,0 +1,30 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(26, 27, 29);
+    color: #ccc;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.text {
+    font-size: 2vw;
+}
+
+.image {
+    background-image: url("../images/photo-1524666041070-9d87656c25bb.jpg");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    transition: moveleft 2s ease-in, fadein 2s ease-in;
+    -webkit-animation: moveleft 2s ease-in, fadein 2s ease-in;
+}

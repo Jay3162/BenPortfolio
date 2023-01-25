@@ -1,0 +1,87 @@
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: rgb(26, 27, 29);
+    color: #ccc;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    height: 80vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.form label {
+    font-size: 1.2vw;
+}
+
+.input-bar {
+    padding: 2vh 0vw;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(114, 114, 114);
+    border: 1px solid #ccc;
+    width: 25vw;
+}
+
+.map {
+    background-image: url("./images/map-marker-temp.jpg");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    transition: moveleft 2s ease-in, fadein 2s ease-in;
+    -webkit-animation: moveleft 2s ease-in, fadein 2s ease-in;
+}
+
+.submit {
+    background-color: rgb(175, 29, 29);
+    padding: 1vh 2vw;
+    border-radius: 7px;
+    border-style: none;
+    color: #ccc;
+    font-size: 1.2vw;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes moveleft {
+    from { transform: translateX(40%); }
+    to   { transform: translateX(0%); }
+}
+
+@-webkit-keyframes moveleft {
+    from { transform: translateX(40%);}
+    to   { transform: translateX(0%);}
+}
+
+@keyframes moveright {
+    from { transform: translateX(-40%); }
+    to   { transform: translateX(0%); }
+}
+
+@-webkit-keyframes moveright {
+    from { transform: translateX(-40%);}
+    to   { transform: translateX(0%);}
+}

@@ -4,20 +4,18 @@
     height: 100vh;
     background-color: rgb(26, 27, 29);
     color: #ccc;
-    display: grid;
 }
 
 .header {
+    width: 100vw;
     display: flex;
     justify-content: center;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    overflow: hidden;
 }
 
 .navbar {
     width: 100vw;
-    position: fixed;
     display: flex;
     justify-content: space-evenly;
     font-weight: 700;
@@ -82,54 +80,4 @@ main {
 @keyframes slideup {
     from {transform: translateY(0%)}
     to   {transform: translateY(20%)}
-}
-
-.main-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    background-color: rgb(26, 27, 29);
-    padding-bottom: 10vh;
-    padding-top: 10vh;
-}
-
-.title-wrapper {
-    transition: moveright 2ms ease-in, fadein 1s ease-in;
-    -webkit-animation: moveleft 2s, fadein 1s ease-in;
-
-}
-
-.title {
-    font-size: 5vw;
-}
-
-.user-image {
-    background-image: url("./images/Shaved-off-sides-with-short-top-part.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 90vh;
-    border-radius: 15px;
-    transition: moveleft 2s ease-in, fadein 1s ease-in;
-    -webkit-animation: moveleft 2s, fadein 1s ease-in;
-
-}
-
-@keyframes moveleft {
-    from { transform: translateX(40%); }
-    to   { transform: translateX(0%); }
-}
-
-@-webkit-keyframes moveleft {
-    from { transform: translateX(40%);}
-    to   { transform: translateX(0%);}
-}
-
-@keyframes moveright {
-    from { transform: translateX(-40%); }
-    to   { transform: translateX(0%); }
-}
-
-@-webkit-keyframes moveright {
-    from { transform: translateX(-40%);}
-    to   { transform: translateX(0%);}
 }
