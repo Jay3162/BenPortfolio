@@ -22,6 +22,7 @@
     /* transition: opacity 2s ease-in; */
     transition: fadein 2s ease-in;    
     -webkit-animation: fadein 2s; /* Safari and Chrome */
+    animation: fadein 2s;
     -webkit-animation: slidein 2s;
     font-size: 1.3vw;
 
@@ -63,6 +64,7 @@
 .nav-el {
     transition: slidein 2s ease-in;
     -webkit-animation: fadein 2s; /* Safari and Chrome */
+    animation: fadein 2s;
 }
 
 main {

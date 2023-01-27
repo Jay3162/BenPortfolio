@@ -5,11 +5,10 @@ export default function Project() {
     return (
         <div className={style["container"]}>
             <div className={style["wrapper"]}>
-                <p>Projects</p>
                 <div className={style["inner-wrapper"]}>
                     <div></div>
                     <div className={style["proj-left"]}>
-                        <p className={style["title"]}></p>
+                        <h2 className={style["title"]}>Project 1</h2>
                         <p className={style["proj-text"]}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                          Vivamus ornare pharetra sapien. Phasellus ut pretium elit,

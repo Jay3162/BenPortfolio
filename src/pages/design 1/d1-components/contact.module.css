@@ -5,15 +5,14 @@
     background-color: rgb(26, 27, 29);
     color: #ccc;
     align-items: center;
-    padding-top: 5vh;
+    justify-content: center;
+    display: flex;
 }
 
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     height: 80vh;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
 }
 
 .form {
@@ -29,12 +28,28 @@
 }
 
 .input-bar {
-    padding: 2vh 0vw;
+    padding: 2vh 1vw;
     border-radius: 10px;
     border-style: none;
     background-color: rgb(114, 114, 114);
     border: 1px solid #ccc;
-    width: 25vw;
+    width: 23vw;
+    color: #ccc;
+}
+
+.message-bar {
+    padding: 2vh 1vw;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(114, 114, 114);
+    border: 1px solid #ccc;
+    width: 23vw;
+    height: 20vh;
+    color: #ccc;
+}
+
+.input-bar:hover, .message-bar:hover, .input-bar:focus, .message-bar:focus {
+    outline: #ccc;
 }
 
 .map {
@@ -45,15 +60,22 @@
     border-radius: 15px;
     transition: moveleft 2s ease-in, fadein 2s ease-in;
     -webkit-animation: moveleft 2s ease-in, fadein 2s ease-in;
+    animation: moveleft 2s ease-in, fadein 2s ease-in;
+    width: 30vw;
 }
 
 .submit {
-    background-color: rgb(175, 29, 29);
+    background-color: rgb(221, 29, 29);
     padding: 1vh 2vw;
     border-radius: 7px;
     border-style: none;
     color: #ccc;
     font-size: 1.2vw;
+}
+
+.submit:hover {
+    background-color: (233, 12, 12);
+    cursor: pointer;
 }
 
 @keyframes fadein {
@@ -66,7 +88,7 @@
     to   { opacity: 1; }
 }
 
-@keyframes moveleft {
+/* @keyframes moveleft {
     from { transform: translateX(40%); }
     to   { transform: translateX(0%); }
 }
@@ -74,9 +96,9 @@
 @-webkit-keyframes moveleft {
     from { transform: translateX(40%);}
     to   { transform: translateX(0%);}
-}
+} */
 
-@keyframes moveright {
+/* @keyframes moveright {
     from { transform: translateX(-40%); }
     to   { transform: translateX(0%); }
 }
@@ -84,4 +106,90 @@
 @-webkit-keyframes moveright {
     from { transform: translateX(-40%);}
     to   { transform: translateX(0%);}
+} */
+
+/* phone screen sizes */
+
+@media (max-width: 450px) {
+    .container {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: rgb(26, 27, 29);
+        color: #ccc;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+    }
+    
+    .form label {
+        font-size: 1.2vw;
+    }
+    
+    .input-bar {
+        padding: 2vh 1vw;
+        border-radius: 10px;
+        border-style: none;
+        background-color: rgb(114, 114, 114);
+        border: 1px solid #ccc;
+        width: 58vw;
+        color: #ccc;
+    }
+
+    label {
+        font-size: 3vw;
+    }
+    
+    .message-bar {
+        padding: 2vh 1vw;
+        border-radius: 10px;
+        border-style: none;
+        background-color: rgb(114, 114, 114);
+        border: 1px solid #ccc;
+        width: 58vw;
+        height: 12vh;
+        color: #ccc;
+    }
+    
+    .input-bar:hover, .message-bar:hover, .input-bar:focus, .message-bar:focus {
+        outline: #ccc;
+    }
+    
+    .map {
+        background-image: url("./images/map-marker-temp.jpg");
+        background-position: center, center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        width: 60vw;
+        height: 50vh;
+    }
+    
+    .submit {
+        background-color: rgb(221, 29, 29);
+        padding: 1vh 2vw;
+        border-radius: 3px;
+        border-style: none;
+        color: #ccc;
+        font-size: 1.2vw;
+        margin-bottom: 3vh;
+    }
+    
+    .submit:hover {
+        background-color: rgb(233, 12, 12);
+        cursor: pointer;
+    }
 }

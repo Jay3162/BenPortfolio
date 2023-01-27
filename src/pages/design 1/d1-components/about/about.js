@@ -4,6 +4,7 @@ import style from './about.module.css';
 export default function About() {
     return (
         <div className={style["container"]}>
+            <h2>Sample Title</h2>
             <div className={style["wrapper"]}>
                 <div></div>
                 <p className={style["text"]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -16,8 +16,8 @@ export default function Contact() {
                     <input className={style["input-bar"]}></input>
                     <label>Email</label>
                     <input className={style["input-bar"]}></input>
-                    <label>Phone Number</label>
-                    <input className={style["input-bar"]}></input>
+                    <label>Message</label>
+                    <textarea className={style["message-bar"]}></textarea>
                     <button className={style["submit"]}>Send</button>
                 </form>
                 <div className={style["map"]}></div>

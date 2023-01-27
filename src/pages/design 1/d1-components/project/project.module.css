@@ -4,9 +4,10 @@
     height: 100vh;
     background-color: rgb(26, 27, 29);
     color: #ccc;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-top: 5vh;
-    
+    justify-content: center;
 }
 
 .wrapper {
@@ -19,6 +20,12 @@
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 1fr;
     height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
 }
 
 .proj-right {
@@ -27,10 +34,85 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 15px;
+    height: 50vh;
+    width: 30vw;
 }
 
 .btn-wrapper {
     display: flex;
     width: inherit;
     justify-content: space-around;
+}
+
+.proj-btn {
+    padding: 2vh 2vw;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: 700;
+    background: rgb(221, 29, 29);
+    color: #ccc;
+    transition: 2ms ease-in-out;
+    box-shadow: inset 0 0 0 0 rgb(233, 12, 12);
+}
+
+.proj-btn:hover {
+    box-shadow: inset 100px 0 0 0 rgb(233, 12, 12);
+    cursor: pointer;
+}
+
+.proj-btn:focus {
+    border-style: none;
+}
+
+/* phone screen sizes */
+
+@media (max-width: 450px) {
+    .container {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: rgb(26, 27, 29);
+        color: #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .proj-text {
+        font-size: 2.5vw;
+        text-align: center;
+        margin: 0 20vw;
+    }
+
+    .btn-wrapper {
+        justify-content: space-evenly;
+    }
+
+    .proj-left {
+        margin-bottom: 2vh;
+    }
+    
+    .proj-right {
+        border-radius: 15px;
+        height: 40vh;
+        width: 60vw;
+    }
+    
+    
+    .proj-btn {
+        padding: 2vh 2vw;
+        border-radius: 10px;
+        border-style: none;
+        font-weight: 700;
+    }
+    
 }

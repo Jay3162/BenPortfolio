@@ -4,6 +4,9 @@ import About from './d1-components/about/about';
 import style from './design1.module.css';
 import Project from './d1-components/project/project';
 import Services from './d1-components/services/services';
+import {AiOutlineHome, AiOutlineInfoCircle, AiOutlineFundProjectionScreen, AiOutlineContacts} from 'react-icons/ai';
+import {MdDesignServices} from 'react-icons/md';
+
 
 export default function Design1() {
     const contactRef = useRef(null);
@@ -49,10 +52,16 @@ export default function Design1() {
             <header className={style["header"]}>
                 <div className={style["navbar"]}>
                     <span className={style["nav-el"]} onClick={handleHome}>Home</span>
+                    <span className={style["nav-el-sml"]} onClick={handleHome}><AiOutlineHome/></span>
                     <span className={style["nav-el"]} onClick={handleAbout}>About</span>
+                    <span className={style["nav-el-sml"]} onClick={handleAbout}><AiOutlineInfoCircle/></span>
                     <span className={style["nav-el"]} onClick={handleProject} data-testid="contact-btn">Projects</span>
+                    <span className={style["nav-el-sml"]} onClick={handleProject} data-testid="contact-btn"><AiOutlineFundProjectionScreen/></span>
                     <span className={style["nav-el"]} onClick={handleServices}>Services</span>
+                    <span className={style["nav-el-sml"]} onClick={handleServices}><MdDesignServices/></span>
                     <span className={style["nav-el"]} onClick={handleContact}>Contact</span>
+                    <span className={style["nav-el-sml"]} onClick={handleContact}><AiOutlineContacts/></span>
+
                 </div>
             </header>
             <main className={style["main-wrapper"]} ref={homeRef}>
