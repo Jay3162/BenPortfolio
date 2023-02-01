@@ -1,126 +1,112 @@
 import react, {useEffect, useState, useRef} from 'react';
 import style from '../project/project.module.css';
-import anjel from './music/Anjel - Is It Fair_.mp3';
+import AudioFile from './audio';
 
-export default function Project() {
-    const new_song = new Audio(anjel);
-    const [play, setPlaying] = useState(false);
-    const myRef = useRef();
-
-    const projFiles = [{
-        "proj1" : {
-            "title" : "Anjel",
-            "text" : "Anjel: Angel are a young west London band. When they asked me to work with them they hadn’t even recorded their first demo. This track is called “Is It fair?” I worked with them from the first recording session to the final master. Role: Sound Engineer, Producer, Mix Engineer, Mastering Engineer.",
-            "song" : new_song,
-            "image" : ""
-        },
-        "proj2" : {
-            "title" : "",
-            "text" : "",
-            "song" : "",
-            "image" : ""
-        }
-        
-    }]
-
-    const PlaySong = () => {
-        myRef.current.play();
-        setPlaying(true);
-
-    }
-    const PauseSong = () => {
-        myRef.current.pause();
-        setPlaying(false);
-
-    }
-
-    const project = (e) => {
-        return (
-                <div>{projFiles.map((obj, id) => {
-                    return (
-                            <div className={style["proj-left"]}>
-                                <h2 className={style["title"]}>{obj.title}{console.log(obj)}</h2>
-                                <p className={style["proj-text"]}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Vivamus ornare pharetra sapien. Phasellus ut pretium elit,
-                                in rhoncus neque. Fusce a dapibus nunc. Aliquam sit amet
-                                enim elementum, molestie est at, semper lectus. Nullam 
-                                molestie orci sed nibh condimentum, id sodales velit auctor. 
-                                </p>
-                                <div className={style["btn-wrapper"]}>
-                                    <audio ref={myRef} src={anjel}/>
-                                    {play ? 
-                                    <button className={style["proj-btn"]} onClick={PauseSong}>Pause</button> : 
-                                    <button className={style["proj-btn"]} onClick={PlaySong}>Play</button>}
-                                    
-                                    <button className={style["proj-btn"]}>button</button>
-                                </div>
-                            </div>
-                    )
-                })}
-                    {/* <h2 className={style["title"]}>Project 1</h2>
-                    <p className={style["proj-text"]}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus ornare pharetra sapien. Phasellus ut pretium elit,
-                    in rhoncus neque. Fusce a dapibus nunc. Aliquam sit amet
-                    enim elementum, molestie est at, semper lectus. Nullam 
-                    molestie orci sed nibh condimentum, id sodales velit auctor. 
-                    </p>
-                    <div className={style["btn-wrapper"]}>
-                        <audio ref={myRef} src={anjel}/>
-                        {play ? 
-                        <button className={style["proj-btn"]} onClick={PauseSong}>Pause</button> : 
-                        <button className={style["proj-btn"]} onClick={PlaySong}>Play</button>}
-                        
-                        <button className={style["proj-btn"]}>button</button>
-                    </div> */}
-                </div>
-        )
-    }
-
+export default function Project({projFiles}) {
     return (
         <div className={style["container"]}>
             <div className={style["wrapper"]}>
+                {/* {projFiles.map((obj, index) => {
+                    return (
+                        <div className={style["inner-wrapper"]} key={index}>
+                            <div></div>
+                            <div className={style["proj-left"]}>
+                                <h2 className={style["title"]}>{obj.title}</h2>
+                                    <p className={style["proj-text"]}>{obj.text}</p>
+                                    {Object.values(obj.song).map((song, i) => {
+                                            return (
+                                                <div className={style["btn-wrapper"]} key={i}>
+                                                    <audio ref={myRef} src={song}/>
+                                                    {play ? 
+                                                    <button className={style["proj-btn"]} onClick={PauseSong} key={i}>Pause</button> : 
+                                                    <button className={style["proj-btn"]} onClick={PlaySong} key={i}>Play</button>}
+                                            </div>
+                                            )
+                                    })}
+                            </div>
+                            <div className={style["proj-right"]}>
+                                {Object.values(obj.image).map((img, ind) => {
+                                    return (
+                                        <img className={style["proj-right-img"]} key={ind} src={img} />
+                                    )
+                                })}
+                            </div>
+                            <div></div>
+                        </div>
+                    )
+                })} */}
                 <div className={style["inner-wrapper"]}>
                     <div></div>
                     <div className={style["proj-left"]}>
-                        {projFiles.map((obj, id) => {
-                            return (
-                                    <div>
-                                        <h2 className={style["title"]}>{obj.proj1.title}</h2>
-                                        <p className={style["proj-text"]}>
-                                            {obj.proj1.text} 
-                                        </p>
-                                        <div className={style["btn-wrapper"]}>
-                                            <audio ref={myRef} src={anjel}/>
-                                            {play ? 
-                                            <button className={style["proj-btn"]} onClick={PauseSong}>Pause</button> : 
-                                            <button className={style["proj-btn"]} onClick={PlaySong}>Play</button>}
-                                            
-                                            <button className={style["proj-btn"]}>button</button>
+                        <h2 className={style["title"]}>{projFiles.title}</h2>
+                        <p className={style["proj-text"]}>{projFiles.text}</p>
+                        <div className={style["audio-wrapper"]}>
+                            {Object.values(projFiles.song).map((song, i) => {
+                                    return (
+                                        <div>
+                                            <AudioFile key={i} src={song}/>
                                         </div>
-                                    </div>)
-                        })}
-                        {/* <h2 className={style["title"]}>Project 1</h2>
-                        <p className={style["proj-text"]}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                         Vivamus ornare pharetra sapien. Phasellus ut pretium elit,
-                          in rhoncus neque. Fusce a dapibus nunc. Aliquam sit amet
-                           enim elementum, molestie est at, semper lectus. Nullam 
-                           molestie orci sed nibh condimentum, id sodales velit auctor. 
-                        </p>
-                        <div className={style["btn-wrapper"]}>
-                            <audio ref={myRef} src={anjel}/>
-                            {play ? 
-                            <button className={style["proj-btn"]} onClick={PauseSong}>Pause</button> : 
-                            <button className={style["proj-btn"]} onClick={PlaySong}>Play</button>}
-                            
-                            <button className={style["proj-btn"]}>button</button>
-                        </div> */}
+                                        
+                                    )
+                            })}
+                        </div>
                     </div>
-                    <div className={style["proj-right"]}></div>
+                    <div className={style["proj-right"]}>
+                        {Object.values(projFiles.image).map((img, ind) => {
+                                return (
+                                    // <div className={style["carousel-main"]}>
+                                    //     <div className={style["carousel-item"]}>
+                                            <img 
+                                            className={style["proj-right-img"]} 
+                                            key={ind}  
+                                            src={img} 
+                                            />
+                                    //     </div>
+                                    // </div>
+                                    // <img className={style["proj-right-img"]} key={ind} src={img} />
+                                )
+                            })}
+                    </div>
                     <div></div>
                 </div>
+                {/* <div className={style["inner-wrapper"]}>
+                    <div></div> */}
+                    {/* <div className={style["proj-left"]}>
+                        {projFiles.map((obj, ind) => {
+                            return (
+                                    <div key={ind}>
+                                        <h2 className={style["title"]}>{obj.title}</h2>
+                                        <p className={style["proj-text"]}>
+                                            {obj.text}
+                                        </p>
+                                        {Object.values(obj.song).map((song, i) => {
+                                            return (
+                                                <div className={style["btn-wrapper"]} key={i}>
+                                                    <audio ref={myRef} src={song}/>
+                                                    {play ? 
+                                                    <button className={style["proj-btn"]} onClick={PauseSong} key={i}>Pause</button> : 
+                                                    <button className={style["proj-btn"]} onClick={PlaySong} key={i}>Play</button>}
+                                            </div>
+                                            )
+                                        })}
+                                    </div>)
+                        })}
+                    </div> */}
+                    {/* <div className={style["proj-right"]}>
+                        {projFiles.map((obj, i) => {
+                            return (
+                                <div key={i}>{console.log(obj.image)}
+                                    {Object.values(obj.image).map((img, ind) => {
+                                        return (
+                                            <img className={style["proj-right-img"]} key={ind} src={img} />
+                                        )
+                                    })}
+                                </div>
+                            )
+                        })}
+                    </div> */}
+                    {/* <div></div>
+                </div> */}
             </div>
         </div>
     )

@@ -26,7 +26,7 @@
 }
 
 .image {
-    background-image: url("../images/photo-1524666041070-9d87656c25bb.jpg");
+    background-image: url("../images/Ben-image.jpg");
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +55,6 @@
     }
 
     .image {
-        background-image: url("../images/photo-1524666041070-9d87656c25bb.jpg");
         background-position: center, center;
         background-repeat: no-repeat;
         background-size: cover;
