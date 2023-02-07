@@ -1,5 +1,4 @@
-import react, {useState, useRef, useEffect} from 'react';
-// import Navbar from './navbar/navbar';
+import react, {useState} from 'react';
 import style from './contact.module.css';
 import emailjs from 'emailjs-com';
 

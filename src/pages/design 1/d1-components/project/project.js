@@ -3,6 +3,8 @@ import style from '../project/project.module.css';
 import AudioFile from './audio';
 
 export default function Project({projFiles, isLight}) {
+
+    // allows me to match a song name with it's corresponding song and map through each in the jsx
     const songs = Object.entries(projFiles.song).reduce((obj, [key, value], i) => {
         obj[key] = {
             name: projFiles.songName[key],

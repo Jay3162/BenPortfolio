@@ -10,7 +10,7 @@ import Contact from '../contact';
 
 // import Project from '../project/project';
 
-
+// confirm that navbar scroll works
 test("scrolls selected section into view", async() => {
   window.HTMLElement.prototype.scrollIntoView = function() {};
   render(<Design1/>);
@@ -20,16 +20,18 @@ test("scrolls selected section into view", async() => {
   await waitFor(() => expect(scrollComp).toBeInTheDocument());
 });
 
-// test("video tab opens on click", () => {
-//   render(<Design1/>);
-//   const vidBtn = getByTestId("vid-btn");
-//   const vidTab = getByTestId("vid-tab");
-//   expect(vidBtn).toBeInTheDocument();
-//   fireEvent.click(vidBtn);
-//   expect(vidTab).toBeInTheDocument();
+// confirm that video tab opens on click
+test("video tab opens on click", () => {
+  render(<Design1/>);
+  const vidBtn = getByTestId("vid-btn");
+  const vidTab = getByTestId("vid-tab");
+  expect(vidBtn).toBeInTheDocument();
+  fireEvent.click(vidBtn);
+  expect(vidTab).toBeInTheDocument();
 
-// });
+});
 
+// confirm that audio component exists and plays audio on click
 test('AudioFile component', async() => {
   const src = audio;
   // const { getByTestId } = render(<AudioFile src={src} />);
@@ -38,40 +40,42 @@ test('AudioFile component', async() => {
   await waitFor(() => expect(audioFile).toBeInTheDocument());
   waitFor(() => expect(audioFile.paused).toBe(true));
 
-  // const Project = ({projFiles}) => {
-  //   return <div>{projFiles}</div>
-  // }
+  const Project = ({projFiles}) => {
+    return <div>{projFiles}</div>
+  }
 
-  // const { getByText } = render(<Project projFiles={projFiles}/>)
-  // await waitFor(() => getByText("anjel"));
+  const { getByText } = render(<Project projFiles={projFiles}/>)
+  await waitFor(() => getByText("anjel"));
 
-  // const playButton = getByTestId('play-button');
-  // fireEvent.click(playButton);
-  // await waitFor(() => expect(getByTestId('audio-file').paused).toBe(false));
+  const playButton = getByTestId('play-button');
+  fireEvent.click(playButton);
+  await waitFor(() => expect(getByTestId('audio-file').paused).toBe(false));
 });
 
-// describe("contact form", () => {
-//   it("should submit form with valid inputs", async() => {
-//     const { getByLabelText, getByText, queryByText } = render(<Contact/>);
 
-//     // fill input fields
-//     const nameInput = getByLabelText(/name/i);
-//     fireEvent.change(nameInput, { target: {value: "John Doe"} });
-//     const emailInput = getByLabelText(/email/i);
-//     fireEvent.change(emailInput, { target: {valvue: "davisjamal647@gmail.com" } });
-//     const messageInput = getByLabelText(/message/i);
-//     fireEvent.change(messageInput, { target: {value: "Hello, I would like to inquire about..." } });
+// confirm that contact form sends email via emailjs
+describe("contact form", () => {
+  it("should submit form with valid inputs", async() => {
+    const { getByLabelText, getByText, queryByText } = render(<Contact/>);
 
-//     // submit form
-//     const submitBtn = getByText(/submit/i);
-//     fireEvent.click(submitBtn);
+    // fill input fields
+    const nameInput = getByLabelText(/name/i);
+    fireEvent.change(nameInput, { target: {value: "John Doe"} });
+    const emailInput = getByLabelText(/email/i);
+    fireEvent.change(emailInput, { target: {valvue: "davisjamal647@gmail.com" } });
+    const messageInput = getByLabelText(/message/i);
+    fireEvent.change(messageInput, { target: {value: "Hello, I would like to inquire about..." } });
 
-//     await wait(() => {
-//       const success = queryByText(/SENT!/i);
-//       expect(success).toBeInTheDocument();
-//   });
-//   })
-// })
+    // submit form
+    const submitBtn = getByText(/submit/i);
+    fireEvent.click(submitBtn);
+
+    await wait(() => {
+      const success = queryByText(/SENT!/i);
+      expect(success).toBeInTheDocument();
+  });
+  })
+})
 
 
 

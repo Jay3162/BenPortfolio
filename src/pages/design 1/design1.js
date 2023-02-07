@@ -91,6 +91,7 @@ const projFiles = [
 
 
 export default function Design1() {
+    // refs for each navbar element
     const contactRef = useRef(null);
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
@@ -100,6 +101,7 @@ export default function Design1() {
 
     const [isLight, setIsLight] = useState(false);
 
+    // inverts the main color layout of the site
     const handleLight = (e) => {
         e.preventDefault();
         setIsLight(!isLight);
@@ -177,7 +179,6 @@ export default function Design1() {
                 <div></div>
                 <div className={style["title-wrapper"]}>
                     <h2 className={style["title"]}>Hello, I'm Solblue...</h2>
-                    {/* <LightThemeButton onClick={handleLight}/> */}
                     <button 
                     className={style["light-btn"]} 
                     onClick={handleLight}

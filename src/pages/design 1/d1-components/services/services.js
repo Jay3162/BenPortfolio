@@ -1,4 +1,4 @@
-import react, {useState, useEffect, useRef} from 'react';
+import react from 'react';
 import styles from './services.module.css';
 import {AiFillEdit} from 'react-icons/ai';
 import { BsMusicNoteList } from 'react-icons/bs';
@@ -6,7 +6,6 @@ import {SiAudiomack} from 'react-icons/si';
 
 
 export default function Services() {
-
 
     return (
         <div className={styles["container"]}>
