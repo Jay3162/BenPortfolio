@@ -182,3 +182,51 @@
     cursor: pointer;
     font-size: 1.4vw;
 }
+
+/* phone screen sizes media queries */
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 10vw;
+    }
+
+    .dj-tab {
+        justify-content: center;
+    }
+
+    .inner-wrapper p {
+        font-size: 3vw;
+    }
+
+    .inner-wrapper a {
+        font-size: 30vw;
+    }
+
+    .dj-btn {
+        font-size: 6vw;
+    }
+
+    .submit-btn {
+        font-size: 2vw;
+    }
+
+    .lower-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-wrapper textarea, .form-wrapper input {
+        width: 40vw;
+    }
+
+    .vid {
+        width: 40vw;
+    }
+
+    .play-btn {
+        display: none;
+    }
+    .close-btn {
+        font-size: 2vw;
+    }
+}

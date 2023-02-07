@@ -171,6 +171,13 @@
         border-radius: 10px;
         font-weight: 700;
         font-size: 1.5vw;
+        width: 9vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .proj-right-img {
+        width: 60vw;
     }
 
     

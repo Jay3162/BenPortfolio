@@ -32,6 +32,14 @@
     font-size: 4vw;
 }
 
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
 @media (max-width: 450px) {
     .container {
         display: flex;
@@ -41,10 +49,19 @@
     }
     .inner-wrapper {
         display: flex;
-        flex-direction: column;
-        height: 80vh;
-        margin: 0 20vw;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        width: 60vw;
     }
+
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 { 
+        font-size: 3vw;
+    }
+
     .tab {
         height: 29vh;
     }
