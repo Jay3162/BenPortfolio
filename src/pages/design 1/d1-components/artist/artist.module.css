@@ -88,11 +88,12 @@
     padding: 1vh 2vw;
     border-radius: 10px;
     font-weight: 700;
-    background: transparent;
-    color: #ccc;
+    /* background: transparent;
+    color: #ccc; */
     transition: 500ms ease-in-out;
     box-shadow: inset 0 0 0 0 #FF0000;
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
     margin-bottom: 0.8vh;
     font-size: 1vw;
     font-weight: 700;
@@ -165,11 +166,12 @@
     padding: 1vh 1vw;
     border-radius: 10px;
     font-weight: 700;
-    background: transparent;
-    color: #ccc;
+    /* background: transparent;
+    color: #ccc; */
     transition: 500ms ease-in-out;
     box-shadow: inset 0 0 0 0 #1DB954;
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
     margin-top: 1vh;
     font-size: 1vw;
 }

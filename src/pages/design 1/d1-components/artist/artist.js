@@ -135,14 +135,40 @@ export default function Artist({isLight}) {
                                     borderBottomColor: isLight ? "rgb(26, 27, 29)" : "#ccc"
                                 }}
                                 />
-                                <button className={style["submit-btn"]}>submit</button>
+                                <button 
+                                className={style["submit-btn"]}
+                                style=
+                                {{
+                                    borderColor: isLight ? "rgb(26, 27, 29)" : "#ccc",
+                                    backgroundColor: isLight ? "#ccc" : "rgb(26, 27, 29)",
+                                    color: isLight ? "rgb(26, 27, 29)" : "#ccc"
+                                }}
+                                >submit</button>
                                 {success ? <h2>SENT!</h2> : <div></div>}
                             </form>
                             
                             <div className={style["vid-wrapper"]}>
                                 <video className={style["vid"]} ref={videoRef} src={saturday} controls></video>
-                                {playVid ? <button className={style["play-btn"]} onClick={handlePause}>pause</button> :
-                                <button className={style["play-btn"]} onClick={handlePlay}>play</button>}
+                                {playVid ? <button 
+                                className={style["play-btn"]} 
+                                onClick={handlePause}
+                                style=
+                                {{
+                                    borderColor: isLight ? "rgb(26, 27, 29)" : "#ccc",
+                                    backgroundColor: isLight ? "#ccc" : "rgb(26, 27, 29)",
+                                    color: isLight ? "rgb(26, 27, 29)" : "#ccc"
+                                }}
+                                >pause</button> :
+                                <button 
+                                className={style["play-btn"]} 
+                                onClick={handlePlay}
+                                style=
+                                {{
+                                    borderColor: isLight ? "rgb(26, 27, 29)" : "#ccc",
+                                    backgroundColor: isLight ? "#ccc" : "rgb(26, 27, 29)",
+                                    color: isLight ? "rgb(26, 27, 29)" : "#ccc"
+                                }}
+                                >play</button>}
                                 <div></div>
                                     {/* <video ref={} src={}></video>
                                     {playVid ? <button></button> : <button></button>} */}
