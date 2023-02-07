@@ -62,6 +62,7 @@ export default function Contact({isLight}) {
                         color: isLight ? "rgb(26, 27, 29)" : "#ccc",
                         transition: "500ms ease-in-out",
                     }}
+                    required
                     ></input>
                     <label htmlFor="email">Email</label>
                     <input 
@@ -77,6 +78,7 @@ export default function Contact({isLight}) {
                         color: isLight ? "rgb(26, 27, 29)" : "#ccc",
                         transition: "500ms ease-in-out",
                     }}
+                    required
                     ></input>
                     <label htmlFor="message">Message</label>
                     <textarea 
@@ -91,6 +93,7 @@ export default function Contact({isLight}) {
                         backgroundColor: "transparent",
                         color: isLight ? "rgb(26, 27, 29)" : "#ccc",
                     }}
+                    required
                     ></textarea>
                     <button 
                     className={style["submit"]} 

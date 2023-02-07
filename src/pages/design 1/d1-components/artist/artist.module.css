@@ -102,7 +102,7 @@
 .play-btn:hover {
     cursor: pointer;
     box-shadow: inset 140px 0 0 0 #ccc;
-    color: #FF0000;
+    color: #FF0000 !important;
     cursor: pointer;
     font-size: 1.2vw;
 }
@@ -178,7 +178,7 @@
 
 .submit-btn:hover {
     box-shadow: inset 250px 0 0 0 #ccc;
-    color: #1DB954;
+    color: #1DB954 !important;
     cursor: pointer;
     font-size: 1.4vw;
 }

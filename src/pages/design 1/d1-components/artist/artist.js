@@ -118,6 +118,7 @@ export default function Artist({isLight}) {
                                 {{
                                     borderBottomColor: isLight ? "rgb(26, 27, 29)" : "#ccc"
                                 }}
+                                required
                                 />
                                 <label>Email</label>
                                 <input 
@@ -126,14 +127,16 @@ export default function Artist({isLight}) {
                                 {{
                                     borderBottomColor: isLight ? "rgb(26, 27, 29)" : "#ccc"
                                 }}
+                                required
                                 />
                                 <label>Message</label>
                                 <textarea 
                                 onChange={(e) => setMsg(e.target.value)}
-                                                                style=
+                                style=
                                 {{
                                     borderBottomColor: isLight ? "rgb(26, 27, 29)" : "#ccc"
                                 }}
+                                required
                                 />
                                 <button 
                                 className={style["submit-btn"]}
