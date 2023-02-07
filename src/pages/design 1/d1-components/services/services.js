@@ -1,42 +1,52 @@
-import react from 'react';
-import styles from './services.module.css'
+import react, {useState, useEffect, useRef} from 'react';
+import styles from './services.module.css';
+import {AiFillEdit} from 'react-icons/ai';
+import { BsMusicNoteList } from 'react-icons/bs';
+import {SiAudiomack} from 'react-icons/si';
+
 
 export default function Services() {
+
+
     return (
         <div className={styles["container"]}>
             <div className={styles["wrapper"]}>
-                <p>Services</p>
+                <h1>Services</h1>
             </div>
             <div className={styles["inner-wrapper"]}>
                 <div></div>
                 <div>
-                    <div className={styles["tab"]}></div>
+                    <h2>Songwriting</h2>
+                    <div className={styles["tab"]}>
+                        <p><BsMusicNoteList/></p>
+                    </div>
                     <p className={styles["text"]}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Vivamus ornare pharetra sapien. Phasellus ut pretium elit, 
-                     in rhoncus neque.
+
                     </p>
                 </div>
                 <div></div>
                 <div>
-                    <div className={styles["tab"]}></div>
+                    <h2>Production</h2>
+                    <div className={styles["tab"]}>
+                        <p><AiFillEdit/></p>
+                    </div>
                     <p className={styles["text"]}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Vivamus ornare pharetra sapien. Phasellus ut pretium elit, 
-                     in rhoncus neque.
+
                     </p>
                 </div>
                 <div></div>
                 <div>
-                    <div className={styles["tab"]}></div>
+                    <h2>Mixing and Mastering</h2>
+                    <div className={styles["tab"]}>
+                        <p><SiAudiomack/></p>
+                    </div>
                     <p className={styles["text"]}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Vivamus ornare pharetra sapien. Phasellus ut pretium elit, 
-                     in rhoncus neque.
+
                     </p>
                 </div>
                 <div></div>
             </div>
+
         </div>
     )
 }

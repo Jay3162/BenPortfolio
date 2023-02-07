@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: rgb(26, 27, 29);
-    color: #ccc;
+    /* background-color: rgb(26, 27, 29);
+    color: #ccc; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,19 +11,25 @@
 }
 
 .inner-wrapper {
-    display: grid;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 2fr 0.5fr 2fr 0.5fr 2fr 1fr;
     height: 80vh;
 }
 
 .tab {
-    background-image: url("../images/placeholder.png");
+    /* background-image: url("../images/placeholder.png"); */
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
     column-gap: 1vw;
     height: 35vh;
+}
+
+.tab p {
+    font-size: 4vw;
 }
 
 @media (max-width: 450px) {

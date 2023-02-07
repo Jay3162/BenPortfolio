@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: rgb(26, 27, 29);
-    color: #ccc;
+    /* background-color: rgb(26, 27, 29);
+    color: #ccc; */
     align-items: center;
     height: 100vh;
     display: flex;
@@ -18,11 +18,11 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 0.5fr 2fr 1fr;
 }
 
 .text {
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 .image {
@@ -48,7 +48,7 @@
     }
 
     .text {
-        font-size: 2vw;
+        font-size: 3vw;
         text-align: center;
         margin: 0 10vw;
         margin-bottom: 1vh;
@@ -86,7 +86,6 @@
     }
 
     .image {
-        background-image: url("../images/photo-1524666041070-9d87656c25bb.jpg");
         background-position: center, center;
         background-repeat: no-repeat;
         background-size: cover;

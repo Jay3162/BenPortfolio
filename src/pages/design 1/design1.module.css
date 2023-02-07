@@ -93,7 +93,7 @@ main {
 
 .main-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 0.5fr 2fr 1fr;
     background-color: rgb(26, 27, 29);
     height: 100vh;
 }
@@ -124,6 +124,10 @@ main {
     animation: moveleft 2s, fadein 1s ease-in;
     width: 30vw;
 
+}
+
+.light-btn:hover {
+    cursor: pointer;
 }
 
 @keyframes moveleft {
