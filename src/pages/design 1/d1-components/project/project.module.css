@@ -143,6 +143,10 @@
         align-items: center;
     }
 
+    .audio-wrapper {
+        margin-top: 2vh;
+    }
+
     .proj-text {
         font-size: 2vw;
         text-align: center;
@@ -170,8 +174,8 @@
         padding: 2vh 2vw;
         border-radius: 10px;
         font-weight: 700;
-        font-size: 1.5vw;
-        width: 9vw;
+        font-size: 5vw;
+        width: 12vw;
         display: flex;
         justify-content: center;
     }
@@ -194,6 +198,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .audio-wrapper {
+        margin-top: 2vh;
+    }
+
+    .audio-wrapper h3 {
+        font-size: 2.5vw;
     }
     
     .inner-wrapper {
@@ -230,5 +242,6 @@
         border-radius: 10px;
         font-weight: 700;
     }
+
     
 }

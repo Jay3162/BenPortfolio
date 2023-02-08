@@ -1,6 +1,8 @@
 import react, {useState} from 'react';
 import style from './contact.module.css';
 import emailjs from 'emailjs-com';
+import { BsInstagram } from 'react-icons/bs';
+import { HiOutlineMail } from 'react-icons/hi';
 
 export default function Contact({isLight}) {
     const [name, setName] = useState();
@@ -106,8 +108,19 @@ export default function Contact({isLight}) {
                     >submit</button>
                     {msgSent ? <h2>SENT!</h2> : <div></div>}
                 </form>
+                {/* <div></div>
+                <div className={style["map"]}></div> */}
                 <div></div>
-                <div className={style["map"]}></div>
+                <div className={style["social-wrapper"]}>
+
+                    <h3><a 
+                    href="https://www.instagram.com/_ben.parker/?igshid=YmMyMTA2M2Y%3D"><BsInstagram/></a></h3>
+                    <h3>@_ben.parker</h3>
+                    <h3></h3>
+                    <h3><HiOutlineMail/></h3>
+                    <h3>solbluemusic@gmail.com</h3>
+                </div>
+
                 <div></div>
             </div>
             
