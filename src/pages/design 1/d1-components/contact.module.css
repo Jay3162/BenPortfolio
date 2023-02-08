@@ -156,6 +156,10 @@
         justify-content: center;
         display: flex;
     }
+
+    .container h2 {
+        font-size: 4vw;
+    }
     
     .wrapper {
         display: flex;
@@ -171,7 +175,7 @@
     }
     
     .form label {
-        font-size: 1.2vw;
+        font-size: 3vw;
     }
     
     .input-bar {
@@ -181,10 +185,6 @@
         /* border: 1px solid #ccc; */
         width: 58vw;
         /* color: #ccc; */
-    }
-
-    label {
-        font-size: 3vw;
     }
     
     .message-bar {
@@ -216,9 +216,8 @@
         /* background-color: transparent; */
         padding: 1vh 2vw;
         border-radius: 3px;
-        border-style: none;
         /* color: #ccc; */
-        font-size: 1.2vw;
+        font-size: 1.8vw;
         margin-bottom: 3vh;
     }
     
