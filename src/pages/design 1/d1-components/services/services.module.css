@@ -49,20 +49,24 @@ h2 {
     }
     .inner-wrapper {
         display: flex;
-        /* flex-direction: column; */
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         width: 60vw;
     }
 
     h1 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     h2 { 
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .tab {
-        height: 29vh;
+        height: 15vh;
+    }
+
+    .tab p {
+        font-size: 9vw;
     }
 }

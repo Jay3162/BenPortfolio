@@ -119,6 +119,7 @@
 
 .social-wrapper a {
     text-decoration: none;
+    color: #ccc;
 }
 
 @keyframes fadein {
@@ -167,6 +168,7 @@
 
     .container h2 {
         font-size: 4vw;
+        display: none;
     }
     
     .wrapper {
@@ -179,6 +181,10 @@
         color: #ccc;
         text-decoration: #ccc;
     }
+
+    .insta-link {
+        text-decoration: none;
+    }
     
     .form {
         display: flex;
@@ -186,7 +192,7 @@
         justify-content: center;
         align-items: center;
         gap: 3vh;
-    }
+     }
     
     .form label {
         font-size: 3vw;

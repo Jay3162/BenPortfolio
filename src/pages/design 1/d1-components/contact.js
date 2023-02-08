@@ -114,7 +114,9 @@ export default function Contact({isLight}) {
                 <div className={style["social-wrapper"]}>
 
                     <h3><a 
-                    href="https://www.instagram.com/_ben.parker/?igshid=YmMyMTA2M2Y%3D"><BsInstagram/></a></h3>
+                    href="https://www.instagram.com/_ben.parker/?igshid=YmMyMTA2M2Y%3D"
+                    className={style["insta-link"]}
+                    ><BsInstagram/></a></h3>
                     <h3>@_ben.parker</h3>
                     <h3></h3>
                     <h3><HiOutlineMail/></h3>

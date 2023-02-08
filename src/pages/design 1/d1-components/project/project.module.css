@@ -197,7 +197,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .audio-wrapper {
@@ -241,6 +241,11 @@
         padding: 2vh 2vw;
         border-radius: 10px;
         font-weight: 700;
+        font-size: 2.5vw;
+    }
+
+    .proj-btn:focus {
+        color:#1DB954 !important;
     }
 
     
