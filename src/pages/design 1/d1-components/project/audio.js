@@ -1,21 +1,23 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useCallback} from "react";
 import style from './project.module.css'; 
 import {BsFillPlayCircleFill} from 'react-icons/bs';
 
 
-export default function AudioFile ({ src, isLight }) {
+export default function AudioFile ({ src, playSong, pauseSong, isLight }) {
 
+  // controls the play/pause settings for each audio file
+  // it's separated as a component to avoid each song being overwritten
     const [play, setPlay] = useState(false);
     const myRef = useRef(null);
   
     const PlaySong = () => {
+      playSong(myRef);
       myRef.current.play();
-      setPlay(true);
     };
   
     const PauseSong = () => {
+      pauseSong();
       myRef.current.pause();
-      setPlay(false);
     };
   
     return (

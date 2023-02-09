@@ -71,7 +71,7 @@ export default function Artist({isLight}) {
                     <h1>Artist</h1>
                     <p>
                         I’m also an artist myself. I release music as Solblue and 
-                        am half of a duo called dividance. Check the links to both
+                        am half of a duo called Dividance. Check the links to both
                         Spotify pages here..
                     </p>
                     <a className={style["spot-link"]} href="https://open.spotify.com/artist/1OAh51aFmI0LooX5sq7EMv">

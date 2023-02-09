@@ -90,10 +90,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px;
-        transition: moveleft 2s ease-in, fadein 2s ease-in;
+        transition: moveleft 2s ease-in, fadein 2s ease-in; 
         -webkit-animation: moveleft 2s ease-in, fadein 2s ease-in;
         animation: moveleft 2s ease-in, fadein 2s ease-in;
         width: 80vw;
         height: 50vh;
+    }
+
+    .wrapper {
+        justify-content: space-between;
     }
 }

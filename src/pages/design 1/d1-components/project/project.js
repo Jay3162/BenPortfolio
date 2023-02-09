@@ -12,6 +12,19 @@ export default function Project({projFiles, isLight}) {
         };
         return obj;
     }, {});
+    const [currentPlay, setCurrentPlay] = useState(null);
+
+    const playSong = (newRef) => {
+        if (currentPlay) {
+            currentPlay.current.pause()
+        }
+        setCurrentPlay(newRef);
+    }
+
+    const pauseSong = () => {
+        setCurrentPlay(null);
+    };
+
 
     return (
         <div className={style["container"]}>
@@ -21,13 +34,15 @@ export default function Project({projFiles, isLight}) {
                     <div className={style["proj-left"]}>
                         <h2 className={style["title"]}>{projFiles.title}</h2>
                         <p className={style["proj-text"]}>{projFiles.text}</p>
+                        <p className={style["proj-info"]}>{projFiles.info}</p>
                         <div className={style["audio-wrapper"]}>
                             {Object.values(songs).map((song, i) => {
                                     return (
                                         <div key={i}>
-                                            
                                             <AudioFile 
                                             src={song.src}
+                                            playSong={playSong}
+                                            pauseSong={pauseSong}
                                             isLight={isLight}
                                             data-testid="audio-file"
                                             /> 
