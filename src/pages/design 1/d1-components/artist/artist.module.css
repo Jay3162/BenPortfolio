@@ -27,6 +27,12 @@
     align-items: center;
 }
 
+.spot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
 .spot-link {
     color: #96aa21;
     font-size: 10vw;

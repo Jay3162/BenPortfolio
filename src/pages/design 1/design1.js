@@ -101,6 +101,10 @@ export default function Design1() {
 
     const [isLight, setIsLight] = useState(false);
 
+    // monitor whether audio is playing
+    const [playingAudio, setPlayingAudio] = useState(null);
+
+
     // inverts the main color layout of the site
     const handleLight = (e) => {
         e.preventDefault();
@@ -219,7 +223,12 @@ export default function Design1() {
                 color: isLight ? 'rgb(26, 27, 29)' : '#ccc'
             }}>
                 <h1>Projects</h1>
-                <Project projFiles={projFiles[0]} isLight={isLight}/>
+                <Project 
+                projFiles={projFiles[0]} 
+                isLight={isLight}
+                playingAudio={playingAudio}
+                setPlayingAudio={setPlayingAudio}
+                />
             </div>
             <div
             style=
@@ -227,7 +236,12 @@ export default function Design1() {
                 backgroundColor: isLight ? '#ccc' : 'rgb(26, 27, 29)',
                 color: isLight ? 'rgb(26, 27, 29)' : '#ccc'
             }}>
-                <Project projFiles={projFiles[1]} isLight={isLight}/>
+                <Project 
+                projFiles={projFiles[1]} 
+                isLight={isLight}
+                playingAudio={playingAudio}
+                setPlayingAudio={setPlayingAudio}
+                />
             </div>
             <div
             style=
@@ -235,7 +249,12 @@ export default function Design1() {
                 backgroundColor: isLight ? '#ccc' : 'rgb(26, 27, 29)',
                 color: isLight ? 'rgb(26, 27, 29)' : '#ccc'
             }}>
-                <Project projFiles={projFiles[2]} isLight={isLight}/>
+                <Project 
+                projFiles={projFiles[2]} 
+                isLight={isLight}
+                playingAudio={playingAudio}
+                setPlayingAudio={setPlayingAudio}
+                />
             </div>
 
             
@@ -260,7 +279,7 @@ export default function Design1() {
             </div>
 
             <div 
-            ref={contactRef }
+            ref={contactRef}
             data-testid="contact-page"
             style=
             {{

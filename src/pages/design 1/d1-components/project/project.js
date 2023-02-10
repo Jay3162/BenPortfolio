@@ -2,7 +2,7 @@ import react, {useEffect, useState, useRef} from 'react';
 import style from '../project/project.module.css';
 import AudioFile from './audio';
 
-export default function Project({projFiles, isLight}) {
+export default function Project({projFiles, isLight, setPlayingAudio, playingAudio}) {
 
     // allows me to match a song name with it's corresponding song and map through each in the jsx
     const songs = Object.entries(projFiles.song).reduce((obj, [key, value], i) => {
@@ -12,19 +12,7 @@ export default function Project({projFiles, isLight}) {
         };
         return obj;
     }, {});
-    const [currentPlay, setCurrentPlay] = useState(null);
-
-    const playSong = (newRef) => {
-        if (currentPlay) {
-            currentPlay.current.pause()
-        }
-        setCurrentPlay(newRef);
-    }
-
-    const pauseSong = () => {
-        setCurrentPlay(null);
-    };
-
+    
 
     return (
         <div className={style["container"]}>
@@ -41,10 +29,10 @@ export default function Project({projFiles, isLight}) {
                                         <div key={i}>
                                             <AudioFile 
                                             src={song.src}
-                                            playSong={playSong}
-                                            pauseSong={pauseSong}
                                             isLight={isLight}
                                             data-testid="audio-file"
+                                            setPlayingAudio={setPlayingAudio}
+                                            playingAudio={playingAudio}
                                             /> 
                                             <h3>{song.name}</h3>
                                         </div>
