@@ -46,7 +46,7 @@ export default function AudioFile ({ src, isLight, playingAudio, setPlayingAudio
             borderColor: isLight ? 'rgb(26, 27, 29)' : '#ccc'
         }}
           >
-            Pause
+            <BsFillPlayCircleFill className={style["play-btn"]}/>
           </button>
         ) : (
           <button 
