@@ -78,9 +78,9 @@ export default function Artist({isLight}) {
                         <a className={style["spot-link"]} href="https://open.spotify.com/artist/1OAh51aFmI0LooX5sq7EMv">
                             <FaSpotify/>
                         </a>
-                        <a className={style["spot-link"]} href="https://open.spotify.com/artist/1OAh51aFmI0LooX5sq7EMv">
+                        {/* <a className={style["spot-link"]} href="https://open.spotify.com/artist/1OAh51aFmI0LooX5sq7EMv">
                             <FaSpotify/>
-                        </a>
+                        </a> */}
                     </div>
                     {open ? 
                     <div 
