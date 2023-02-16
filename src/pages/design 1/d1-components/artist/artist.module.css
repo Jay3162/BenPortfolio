@@ -28,9 +28,11 @@
 }
 
 .spot-wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* justify-content: space-between; */
     width: 30vw;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
 }
 
 .spot-link {
